@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      function ValidatePassword() {
+        var password = prompt("Please enter password to proceed", "");
+
+        if (password == "Admin Password") {
+          return true;
+        }
+        return false;
+      }
+    </script>
+
     <title>My Secrets</title>
   </head>
   <body>
     <h1>My Secret File</h1>
-    <p>Click <a href="secrets.txt">here</a> to access my secret file.</p>
+    <p>
+      Click
+      <a href="secrets.txt" id="HyperLink1" onclick="return ValidatePassword();"
+        >here</a
+      >
+      to access my secret file.
+    </p>
   </body>
 </html>
