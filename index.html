@@ -9,6 +9,30 @@
       }
     </style>
     <script>
+      // Get a reference to the secret link paragraph
+      var secretLink = document.getElementById("secret-link");
+
+      // Get the text content of the secret link paragraph
+      var secretLinkText = secretLink.textContent;
+
+      // Set the secret link paragraph to be empty
+      secretLink.textContent = "";
+
+      // Typewriter effect
+      var i = 0;
+      var typewriter = setInterval(function () {
+        // If the entire string has been typed, stop the typewriter
+        if (i >= secretLinkText.length) {
+          clearInterval(typewriter);
+        }
+        // Otherwise, add the next character to the secret link paragraph
+        else {
+          secretLink.textContent += secretLinkText[i];
+          i++;
+        }
+      }, 50);
+    </script>
+    <script>
       function ValidatePassword() {
         var password = prompt("Please enter password to proceed", "");
 
