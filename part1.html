@@ -16,6 +16,11 @@
         white-space: pre;
       }
 
+      a {
+        color: #00ff33;
+        text-decoration: underline; /* no underline */
+      }
+
       #secret-link {
         position: absolute;
         bottom: 10%;
@@ -56,7 +61,7 @@
             secretLink.textContent += secretLinkText[i];
             i++;
           }
-        }, 1);
+        }, 25);
       }
       function ValidatePassword() {
         var password = prompt("Please enter password to proceed", "");
